@@ -1,0 +1,12 @@
+<h1>Personalseite</h1>
+
+<h2>Hinzugefügte Bücher:</h2>
+<ul>
+    <li *ngFor="let book of addedBooks">
+        {{ book.title }} : Anzahl durchgelesen: {{ book.numberOfTimesRead }}
+        <input type="number" [(ngModel)]="book.numberOfTimesRead"
+            (change)="updateNumberOfTimesRead(book, book.numberOfTimesRead)">
+    </li>
+</ul>
+
+<button (click)="getBooks()">Bücher aktualisieren</button>
