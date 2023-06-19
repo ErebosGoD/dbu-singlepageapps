@@ -1,0 +1,59 @@
+.personal-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-book-container,
+.book-form {
+    width: 80%;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+.update-input-container,
+.book-form input {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.added-books-container {
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.added-books-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.added-books-container li {
+    margin-bottom: 10px;
+}
+
+.remove-book-container,
+.update-books-button-container {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.remove-book-container input,
+.update-books-button-container button {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.logout-button {
+    font-size: 24px;
+}
+
+.logout-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+#logout-button {
+    font-size: 24px;
+}

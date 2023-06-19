@@ -40,7 +40,6 @@ export class LoginComponent {
       },
       (error) => {
         console.error('Fehler beim Anmelden:', error);
-        // Hier kannst du Fehlerbehandlung durchführen
       }
     );
   }

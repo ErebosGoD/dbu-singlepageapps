@@ -33,7 +33,6 @@ export class RegisterComponent {
       },
       (error) => {
         console.error('Fehler bei der Registrierung:', error);
-        // Hier kannst du Fehlerbehandlung durchführen
       }
     );
   }

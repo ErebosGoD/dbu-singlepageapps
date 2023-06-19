@@ -1,20 +1,56 @@
-<h1>Personalseite</h1>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-<h2>Hinzugefügte Bücher:</h2>
-<ul>
-    <li *ngFor="let book of addedBooks">
-        {{ book.title }}: ISBN :{{book.isbn}}
-    </li>
-</ul>
+<div class="personal-page">
+    <h1>Personalseite</h1>
 
-<div>
-    <label for="removeBookInput">Buchtitel:</label>
-    <input id="removeBookInput" type="text" [(ngModel)]="bookToRemove">
-    <button (click)="removeBook()">Buch entfernen</button>
-</div>
-<div>
-    <button (click)="getBooks()">Bücher aktualisieren</button>
-</div>
-<div>
-    <button (click)="logout()">Ausloggen</button>
+    <div class="update-book-container">
+        <h3>Buch aktualisieren:</h3>
+        <div class="update-input-container">
+            <label for="titleInput">Titel</label>
+            <input type="text" id="titleInput" [(ngModel)]="book.title">
+        </div>
+        <div class="update-input-container">
+            <label for="isbnInput">ISBN:</label>
+            <input type="text" id="isbnInput" [(ngModel)]="book.isbn">
+        </div>
+        <button (click)="updateBook()">Aktualisieren</button>
+    </div>
+
+    <div class="book-form">
+        <h3>Neues Buch hinzufügen:</h3>
+        <div class="book-input-container">
+            <label for="newBookTitle">Titel:</label>
+            <input type="text" id="newBookTitle" [(ngModel)]="newBook.title" placeholder="Titel">
+        </div>
+        <div class="book-input-container">
+            <label for="newBookISBN">ISBN:</label>
+            <input type="text" id="newBookISBN" [(ngModel)]="newBook.isbn" placeholder="ISBN">
+        </div>
+        <button (click)="addBook()">Buch hinzufügen</button>
+    </div>
+
+    <div class="added-books-container">
+        <h2>Hinzugefügte Bücher:</h2>
+        <ul>
+            <li *ngFor="let book of addedBooks">
+                Titel:{{ book.title }} ISBN: {{ book.isbn }}
+            </li>
+        </ul>
+    </div>
+
+    <div class="remove-book-container">
+        <label for="removeBookInput">Buchtitel:</label>
+        <input id="removeBookInput" type="text" [(ngModel)]="bookToRemove">
+        <button (click)="removeBook()">Buch entfernen</button>
+    </div>
+
+    <div class="update-books-button-container">
+        <button (click)="getBooks()">Bücher aktualisieren</button>
+    </div>
+
+    <div class="logout-button-container">
+        <button (click)="logout()" id="logout-button">Ausloggen</button>
+    </div>
 </div>
