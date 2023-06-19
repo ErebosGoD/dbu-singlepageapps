@@ -3,10 +3,18 @@
 <h2>Hinzugefügte Bücher:</h2>
 <ul>
     <li *ngFor="let book of addedBooks">
-        {{ book.title }} : Anzahl durchgelesen: {{ book.numberOfTimesRead }}
-        <input type="number" [(ngModel)]="book.numberOfTimesRead"
-            (change)="updateNumberOfTimesRead(book, book.numberOfTimesRead)">
+        {{ book.title }}: ISBN :{{book.isbn}}
     </li>
 </ul>
 
-<button (click)="getBooks()">Bücher aktualisieren</button>
+<div>
+    <label for="removeBookInput">Buchtitel:</label>
+    <input id="removeBookInput" type="text" [(ngModel)]="bookToRemove">
+    <button (click)="removeBook()">Buch entfernen</button>
+</div>
+<div>
+    <button (click)="getBooks()">Bücher aktualisieren</button>
+</div>
+<div>
+    <button (click)="logout()">Ausloggen</button>
+</div>
